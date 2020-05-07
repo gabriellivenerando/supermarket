@@ -1,32 +1,77 @@
-let produto1 = new Object();
-produto1.nome = 'Arroz'
-produto1.id = 1;
-produto1.preco = 1.99;
+// produto id (string), name(string); price(number)
+// cartItem produto, quantidade(number); price (number)
+// Cart: cartitem [] = items; additem; removeitem. calculeTotal()
+// colocar o botao de adc ao carrinho, listar no carrinho os produtos 
 
 
-let produto2 = new Object();
-produto2.nome = 'Feijão'
-produto2.id = 2;
-produto2.preco = 3.99;
-    
-let carrinho = [];
-console.log(carrinho);
-
-let produtos;
-
-
-function adicionarproduto1(){
-    carrinho.push(produto1);
-    alert(`${produto1.nome} adicionado ao carrinho`)
-    
+let laranja = {
+    id: "1",
+    nome: "laranja",
+    preco: 1.99
 }
 
-function adicionarproduto2(){
-    carrinho.push(produto2);
-    alert(`${produto2.nome} adicionado ao carrinho`)
+let morango = {
+    id: "2",
+    nome: "morango",
+    preco: 2.99
 }
 
+const button = document.querySelector('.button1')
+const button2 = document.querySelector('.button2')
 
-function mostrarProdutos(){
-    
-}
+
+
+button.addEventListener('click', function(){
+    const table = document.querySelector('.table')
+    const linha1 = document.querySelector('.linha1');
+
+    const td = document.createElement('td');
+    const td1 = document.createElement('td');
+    const td2 = document.createElement('td');
+
+    td.innerText = laranja.nome;
+    td1.innerText = laranja.id;
+    td2.innerText = laranja.preco;
+
+    linha1.appendChild(td);
+    linha1.appendChild(td1);
+    linha1.appendChild(td2);
+})
+
+button2.addEventListener('click', function(){
+    const table = document.querySelector('.table')
+    const linha2 = document.querySelector('.linha2');
+
+    const td = document.createElement('td');
+    const td1 = document.createElement('td');
+    const td2 = document.createElement('td');
+
+    td.innerText = morango.nome;
+    td1.innerText = morango.id;
+    td2.innerText = morango.preco;
+
+    linha2.appendChild(td);
+    linha2.appendChild(td1);
+    linha2.appendChild(td2);
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
